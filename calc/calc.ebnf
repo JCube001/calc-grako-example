@@ -1,0 +1,11 @@
+@@grammar :: Calc
+
+start = expression $;
+
+expression = head:term tail:{('+' | '-') term};
+term = head:power tail:{('*' | '/') power};
+power = head:factor tail:{'^' factor};
+factor = '(' @:expression ')' | negative | number;
+negative = '-' @:expression;
+
+number = /[-+]?\d+(\.\d+)?([Ee]-?\d+)?/;
