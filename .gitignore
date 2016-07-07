@@ -7,6 +7,3 @@ dist/
 __pycache__/
 *.so
 *~
-
-# Auto-generated source
-calc.py
