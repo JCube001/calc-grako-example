@@ -22,9 +22,11 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 '''
 
-from calc.calc import CalcParser
+from calc import CalcParser
 from grako.exceptions import FailedParse
 from decimal import Decimal
+
+__version__ = '1.0.1'
 
 
 class CalcSemantics:
@@ -68,6 +70,7 @@ class CalcSemantics:
 
 
 def main():
+    print('Welcome to Calc v{}'.format(__version__))
     try:
         parser = CalcParser(semantics=CalcSemantics())
         while True:

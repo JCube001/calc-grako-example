@@ -1,3 +1,4 @@
+from calc.__main__ import __version__
 from contextlib import contextmanager
 from setuptools import setup
 from setuptools.command.build_py import build_py
@@ -28,7 +29,7 @@ with open('README.rst', encoding='utf-8') as f:
 
 setup(
     name='calc',
-    version='1.0.0',
+    version=__version__,
     description='An example calculator application showing how to use Grako',
     long_description=long_description,
     url='https://github.com/JCube001/calc-grako-example',
